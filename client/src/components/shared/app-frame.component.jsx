@@ -1,19 +1,12 @@
-import * as React from "react";
+import React from "react";
 import PolichatIconComponent from "./polichat-icon.component";
-
-const appFrameStyles = require<any>("./app-frame.component.css");
+ 
+import styles from "./app-frame.component.scss";
 
 const appFrameComponent = ( props ) => {
 
-  let frameCss;
-  if ( props.colorScheme === "dark" ){
-    frameCss = appFrameStyles.dark;
-  } else if ( props.colorScheme === "light" ){
-    frameCss = appFrameStyles.light;
-  }
-
   return(
-         <div style={appFrameStyles.light}>
+         <div className={styles.light}>
            <div className="app-header" role="banner">
              <PolichatIconComponent width="400px" height="100px" />
            </div>
@@ -25,6 +18,5 @@ const appFrameComponent = ( props ) => {
   )
 
 }
-
 
 export default appFrameComponent;

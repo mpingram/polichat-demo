@@ -4,20 +4,12 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
-    "postinstall": "typings install",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w",
-    "typings": "typings",
     "build": "webpack",
     "test": "karma start karma.conf.js"
   },
   "author": "Michael Ingram",
   "license": "ISC",
   "devDependencies": {
-    "@types/jasmine": "^2.5.43",
-    "@types/karma-jasmine": "0.0.29",
-    "@types/react": "^15.0.10",
-    "@types/react-dom": "^0.14.23",
     "babel-core": "^6.23.1",
     "babel-loader": "^6.3.2",
     "babel-polyfill": "^6.23.0",
@@ -39,9 +31,6 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "sass-loader": "^6.0.0",
     "style-loader": "^0.13.1",
-    "ts-loader": "^2.0.0",
-    "typescript": "^2.0.3",
-    "typings": "^1.4.0",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.4.0",
     "webpack-stream": "^3.2.0"

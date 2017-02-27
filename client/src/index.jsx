@@ -3,10 +3,11 @@ import * as ReactDOM from 'react-dom';
 
 // AppContainer is a necessary wrapper component for HMR (hot module replacement)
 import { AppContainer } from 'react-hot-loader';
-// module is global 
-declare const module: any;
 
 import { AppComponent } from './components/app.component';
+
+// global styles: scss variables, resets, and global media queries
+import './global-styles/main.scss';
 
 const render = (Component) => {
   ReactDOM.render(

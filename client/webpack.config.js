@@ -1,4 +1,3 @@
-// optimize css loads later.
 //const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
@@ -20,7 +19,7 @@ module.exports = {
     "webpack/hot/only-dev-server",
     // bundle the client for hot reloading
     // only- means to only hot reload for successful updates
-    "./index.tsx",
+    "./index.jsx",
   ],
 
   output: {
@@ -55,9 +54,9 @@ module.exports = {
         })
       },
       */
-     
       {
-        test: /\.css$/,
+        test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader?modules&importLoaders=1" },
@@ -75,13 +74,11 @@ module.exports = {
           { loader: "sass-loader" }
         ]
       },
-
-      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
       { 
-        test: /\.tsx?$/,
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: [
           { loader: "babel-loader" },
-          { loader: "ts-loader" },
         ]
       }
     ]
@@ -93,7 +90,7 @@ module.exports = {
       path.resolve(__dirname, "app")
     ],
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ["*", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+    extensions: ["*", ".webpack.js", ".web.js", ".js", ".jsx"]
   },
 
   plugins: [
@@ -109,9 +106,9 @@ module.exports = {
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
   //externals: fs.readdirSync("node_modules")
-  /*externals: {
-       "react": "react",
-       "react-dom": "reactDOM",
-  },*/
+  externals: {
+       //"react": "react",
+       //"react-dom": "reactDOM",
+  },
 };
 
