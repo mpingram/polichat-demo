@@ -11,7 +11,7 @@ import { AppComponent } from './components/app.component';
 const render = (Component) => {
   ReactDOM.render(
     <AppContainer>
-      <Component name="Michael"/>
+      <Component />
     </AppContainer>,
     document.getElementById('root')
   );

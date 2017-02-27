@@ -11,10 +11,6 @@
     "removeComments": false,
     "noImplicitAny": false
   },
-  "awesomeTypescriptLoaderOptions":{
-    "useBabel": true,
-    "useCache": true
-  },
   "include": [
     "./src/**/*"
   ]

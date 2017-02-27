@@ -1,0 +1,11 @@
+.light {
+  width: 100vm;
+  height: 100vm;
+  background-color: red; 
+}
+
+.dark {
+  width: 100vm;
+  height: 100vm;
+  background-color: orange;
+}

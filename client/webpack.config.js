@@ -36,7 +36,7 @@ module.exports = {
   devServer: {
     hot: true,
     contentBase: path.resolve( __dirname, "dist" ),
-    publicPath: "/",
+    //publicPath: "/",
   },
 
   module: {
@@ -59,8 +59,8 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          {loader: "style-loader"},
-          {loader: "css-loader?modules&importLoaders=1"},
+          { loader: "style-loader" },
+          { loader: "css-loader?modules&importLoaders=1" },
           { loader: "postcss-loader",
             options: {
               plugins: function(){
@@ -72,6 +72,7 @@ module.exports = {
               }
             }
           },
+          { loader: "sass-loader" }
         ]
       },
 
@@ -79,8 +80,8 @@ module.exports = {
       { 
         test: /\.tsx?$/,
         use: [
-          {loader: "babel-loader"},
-          {loader: "ts-loader"},
+          { loader: "babel-loader" },
+          { loader: "ts-loader" },
         ]
       }
     ]
@@ -92,7 +93,7 @@ module.exports = {
       path.resolve(__dirname, "app")
     ],
     // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: [".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
+    extensions: ["*", ".webpack.js", ".web.js", ".ts", ".tsx", ".js"]
   },
 
   plugins: [
@@ -107,9 +108,10 @@ module.exports = {
   // assume a corresponding global variable exists and use that instead.
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
-  // externals: {
-  //     "react": "React",
-  //     "react-dom": "ReactDOM"
-  // },
+  //externals: fs.readdirSync("node_modules")
+  /*externals: {
+       "react": "react",
+       "react-dom": "reactDOM",
+  },*/
 };
 
