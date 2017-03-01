@@ -1,0 +1,65 @@
+@import "~../shared/styles/variables";
+
+.box{
+  flex: 0 0 auto;
+
+  margin: 0 auto;
+  padding: 2em;
+  border-radius: 12px;
+
+  box-shadow: $shadow-low;
+  
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  max-width: 95%;
+}
+
+// box sizes
+// -----------
+.short{
+  min-height: 35%;
+}
+
+.medHeight{
+  min-height: 50%;
+}
+
+.tall{
+  min-height: 75%;
+}
+
+.thin{
+  width: 400px;
+
+}
+.medWidth{
+  width: 900px;
+
+}
+.wide{
+  width: 1000px;
+
+}
+
+// box themes
+// -----------
+.light{
+  background-color: $col-bg-light;
+  color: $col-text-black;
+}
+
+.dark{
+  background-color: $col-bg-dark;
+  color: $col-text-white;
+}
+
+.invisible{
+  background: none;
+  box-shadow: none;
+  border-radius: none;
+}

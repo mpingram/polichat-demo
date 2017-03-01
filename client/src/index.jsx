@@ -19,16 +19,18 @@ import ChatView from "./chat/chat.view";
 import ErrorView from "./error/error.view";
 
 render( (
-  /* remove AppContainer in production */
+
+  // remove AppContainer in production
   <AppContainer>
     <Router history={browserHistory}>
       <Route path="/" component={LandingView} />
-      <Route path="/error" component={ErrorView} />
       <Route path="/chat" component={ChatView} />
       <Route path="/profile" component={ProfileView} />
+      <Route path="/*" component={ErrorView} />
     </Router>
   </AppContainer>
 
 ), document.getElementById("root") );
 
+// remove activateHMR call in production
 activateHMR();

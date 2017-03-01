@@ -1,15 +1,27 @@
 import React from "react";
 
-import AppFrameComponent from "../shared/app-frame.component";
+import AppFrame from "../shared/app-frame.component";
+import Box from "../shared/box.component";
+import PoliticalSpectrumUIElement from "../shared/ui/political-spectrum-ui-element.component";
+
+const propTypes = {
+  firstTimeSetup: React.PropTypes.bool,
+}
 
 const ProfileView = ( props ) => {
   
+
   return (
-    <AppFrameComponent theme="inside">
-      <div> Implement me! </div>
-    </AppFrameComponent>
+    <AppFrame theme="inside">
+      <Box theme="inside" size="lg">
+        
+
+
+      </Box>
+    </AppFrame>
   )
 
 };
 
+ProfileView.propTypes = propTypes;
 export default ProfileView;

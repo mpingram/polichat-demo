@@ -24,26 +24,6 @@
   font-size: 1.5em;
 }
 
-.loginContainer{
-  flex: 0 0 auto;
-  max-width: 95%;
-  width: 900px;
-  min-height: 50%;
-  margin: 0 auto;
-  padding: 2em;
-  border-radius: 12px;
-  background-color: $col-bg-dark;
-
-  box-shadow: $shadow-low;
-  
-  color: $col-text-white;
-  text-align: center;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 .loginText{
   font-size: 1.25em;

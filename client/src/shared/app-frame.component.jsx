@@ -6,10 +6,10 @@ import styles from "./app-frame.component.scss";
 const propTypes = {
   // implement me
   theme: React.PropTypes.oneOf(["inside", "outside"]).isRequired,
-  content: React.PropTypes.element.isRequired
+  //content: React.PropTypes.element.isRequired
 }
 
-const appFrameComponent = ( props ) => {
+const appFrame = ( props ) => {
   
   let appFrameTheme;
   switch ( props.theme ) {
@@ -22,16 +22,15 @@ const appFrameComponent = ( props ) => {
   }
 
   return(
-         <div className={appFrameTheme}>
-           <div className={styles.appHeader} role="banner">
-             <PolichatIconComponent height="100%" />
-           </div>
-
-          {props.content}
-         </div>
+    <div className={appFrameTheme}>
+      <div className={styles.appHeader} role="banner">
+        <PolichatIconComponent height="100%" />
+      </div>
+      {props.children}
+    </div>
   )
 
 }
 
-appFrameComponent.propTypes = propTypes;
-export default appFrameComponent;
+appFrame.propTypes = propTypes;
+export default appFrame;
