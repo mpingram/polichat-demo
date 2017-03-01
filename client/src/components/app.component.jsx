@@ -1,9 +1,9 @@
 import * as React from "react";
 
-import AppFrameComponent from "./shared/app-frame.component";
+import LandingComponent from "./landing/landing.component";
 
 export const AppComponent = ( props ) => {
   return (
-        <AppFrameComponent colorScheme="light" />
+        <LandingComponent />
   )
 };

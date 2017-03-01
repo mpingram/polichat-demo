@@ -3,20 +3,35 @@ import PolichatIconComponent from "./polichat-icon.component";
  
 import styles from "./app-frame.component.scss";
 
+const propTypes = {
+  // implement me
+  theme: React.PropTypes.oneOf(["dark", "light"]).isRequired,
+  content: React.PropTypes.element.isRequired
+}
+
 const appFrameComponent = ( props ) => {
+  
+  let appFrameTheme;
+  switch ( props.theme ) {
+    case "dark":
+      appFrameTheme = styles.appFrameDark;
+      break;
+    case "light":
+      appFrameTheme = styles.appFrameLight;
+      break;
+  }
 
   return(
-         <div className={styles.light}>
-           <div className="app-header" role="banner">
-             <PolichatIconComponent width="400px" height="100px" />
+         <div className={appFrameTheme}>
+           <div className={styles.appHeader} role="banner">
+             <PolichatIconComponent height="100%" />
            </div>
 
-          <div className="content" role="main">
-            {props.content}
-          </div>
+          {props.content}
          </div>
   )
 
 }
 
+appFrameComponent.propTypes = propTypes;
 export default appFrameComponent;

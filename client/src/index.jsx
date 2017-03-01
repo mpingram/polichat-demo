@@ -7,7 +7,7 @@ import { AppContainer } from 'react-hot-loader';
 import { AppComponent } from './components/app.component';
 
 // global styles: scss variables, resets, and global media queries
-import './global-styles/main.scss';
+import './components/shared/global-styles/main.scss';
 
 const render = (Component) => {
   ReactDOM.render(
