@@ -1,0 +1,46 @@
+@import '~./styles/variables';
+
+.appFrame{
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  
+}
+
+.appHeader{
+  width: 100%;
+  flex: 0 0 auto;
+  height: 60px;
+  background-color: $col-bg-light;
+}
+@media (max-width:400px) {
+  .appHeader{
+    flex: 0 0 40px;
+  }
+}
+
+.appHeaderLight{
+  @extend .appHeader;
+}
+
+.appHeaderDark{
+  @extend .appHeader;
+  box-shadow: $shadow-header;
+}
+
+
+.appFrameLight{
+  @extend .appFrame;
+  background-color: $col-bg-light;
+}
+
+.appFrameDark{
+  @extend .appFrame;
+  background-color: $col-bg-dark;
+}

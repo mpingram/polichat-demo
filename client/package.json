@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack",
+    "build": "webpack -p",
     "test": "karma start karma.conf.js"
   },
   "author": "Michael Ingram",
@@ -38,6 +38,7 @@
   "dependencies": {
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "react-facebook-login": "^3.5.0"
+    "react-facebook-login": "^3.5.0",
+    "react-router": "^3.0.2"
   }
 }

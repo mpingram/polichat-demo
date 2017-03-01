@@ -1,28 +1,34 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import React from 'react';
+import { render } from 'react-dom';
+import { Router, Route, Link, browserHistory } from 'react-router';
 
+// DEVELOPMENT
+// ----------
 // AppContainer is a necessary wrapper component for HMR (hot module replacement)
 import { AppContainer } from 'react-hot-loader';
+import activateHMR from './hmr.dev';
+// ----------
 
-import { AppComponent } from './components/app.component';
+// document-level styles
+import "./shared/styles/main.scss";
 
-// global styles: scss variables, resets, and global media queries
-import './components/shared/global-styles/main.scss';
+// routes
+import LandingView from "./landing/landing.view";
+import ProfileView from "./profile/profile.view";
+import ChatView from "./chat/chat.view";
+import ErrorView from "./error/error.view";
 
-const render = (Component) => {
-  ReactDOM.render(
-    <AppContainer>
-      <Component />
-    </AppContainer>,
-    document.getElementById('root')
-  );
-};
+render( (
+  /* remove AppContainer in production */
+  <AppContainer>
+    <Router history={browserHistory}>
+      <Route path="/" component={LandingView} />
+      <Route path="/error" component={ErrorView} />
+      <Route path="/chat" component={ChatView} />
+      <Route path="/profile" component={ProfileView} />
+    </Router>
+  </AppContainer>
 
-render(AppComponent);
+), document.getElementById("root") );
 
-// Hot Module Replacement API
-if (module.hot) {
-  module.hot.accept('./components/app.component', () => {
-    render(AppComponent)
-  });
-}
+activateHMR();
