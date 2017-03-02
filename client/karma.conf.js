@@ -1,11 +1,10 @@
 // #docregion
 module.exports = function(config) {
 
-  var appBase    = 'app/';       // transpiled app JS and map files
-  var appSrcBase = 'app/';       // app source TS files
+  var appBase    = 'dist/';       // transpiled app JS and map files
+  var appSrcBase = 'src/';       // app source TS files
 
-  //var testBase    = 'testing/';       // transpiled test JS and map files
-  //var testSrcBase = 'testing/';       // test source TS files
+  var testBase    = 'spec/';       // transpiled test JS and map files
 
   config.set({
     basePath: '',
@@ -27,21 +26,15 @@ module.exports = function(config) {
     },
     files: [
 
-      // moment.js
-      'bower_components/moment/moment.js',
-
-      // jQuery
-      'bower_components/jquery/dist/jquery.min.js',
-
       // transpiled application & spec code paths loaded via module imports
       {pattern: appBase + '**/*.js', included: false, watched: true},
-      //{pattern: testBase + '**/*.js', included: false, watched: true},
+      {pattern: testBase + '**/*.js', included: false, watched: true},
 
       {pattern: appBase + '**/*.html', included: false, watched: true},
       {pattern: appBase + '**/*.css', included: false, watched: true},
 
       // Paths for debugging with source maps in dev tools
-      {pattern: appSrcBase + '**/*.ts', included: false, watched: false},
+      {pattern: appSrcBase + '**/*.jsx', included: false, watched: false},
       {pattern: appBase + '**/*.js.map', included: false, watched: false},
 
     ],

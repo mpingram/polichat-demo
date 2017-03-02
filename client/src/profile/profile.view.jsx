@@ -14,8 +14,8 @@ const ProfileView = ( props ) => {
   return (
     <AppFrame theme="inside">
       <Box theme="inside" size="lg">
-        
 
+        <PoliticalSpectrumUIElement/>
 
       </Box>
     </AppFrame>

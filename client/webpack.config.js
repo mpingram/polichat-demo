@@ -57,7 +57,7 @@ module.exports = {
       */
       {
         test: /\.scss$/,
-        exclude: /node_modules/,
+        include: /src/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader?modules&importLoaders=1" },
@@ -77,7 +77,7 @@ module.exports = {
       },
       { 
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        include: /src/,
         use: [
           { loader: "babel-loader" },
         ]

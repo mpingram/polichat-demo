@@ -1,19 +1,6 @@
 @import "~../shared/styles/variables";
 
-.contentWrapper{
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  //align-items: stretch;
-}
 
-.callToActionContainer{
-  margin-bottom: 6em;
-  flex: 0 0 auto;
-  text-align: center;
-}
 .callToActionHeader{
   color: $col-bg-dark;
   font-size: 4em;
@@ -23,7 +10,6 @@
   color: $col-text-black;
   font-size: 1.5em;
 }
-
 
 .loginText{
   font-size: 1.25em;

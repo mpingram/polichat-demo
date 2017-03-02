@@ -1,0 +1,24 @@
+@import "~../styles/variables";
+
+
+.track{
+  position: absolute;
+  z-index: 0;
+  width: calc(100% - 30px);
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $col-neutral;
+}
+
+.meter{
+  position: absolute;
+  width: 50%;
+  bottom: 0;
+  left: 50%; 
+  height: 10px;
+  transition: background-color 100ms linear; 
+  transform-origin: left,
+}
+

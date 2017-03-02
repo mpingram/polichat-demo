@@ -26,7 +26,9 @@ const appFrame = ( props ) => {
       <div className={styles.appHeader} role="banner">
         <PolichatIconComponent height="100%" />
       </div>
-      {props.children}
+      <div className={styles.content} role="main">
+        {props.children}
+      </div>
     </div>
   )
 
