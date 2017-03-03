@@ -5,6 +5,8 @@ import PoliticalSpectrumLabel from "./political-spectrum-label.component.jsx";
 
 import chooseColor from "../utils/choose-color";
 
+import { PoliticalSpectrumNumericMax } from "../config/app-defaults";
+
 import "./political-spectrum-ui-element.component.scss";
 
 const propTypes = {
@@ -25,7 +27,7 @@ class PoliticalSpectrumUIElement extends React.Component {
     
     this.message = props.message;
 
-    this.max = 12;
+    this.max = PoliticalSpectrumNumericMax;
     this.min = this.max * -1;
     this.handleChange = ( ev ) => {
       const value = ev.target.value;

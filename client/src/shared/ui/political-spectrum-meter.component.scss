@@ -13,6 +13,7 @@
 }
 
 .meter{
+  border-radius: 3px;
   position: absolute;
   width: 50%;
   bottom: 0;
@@ -22,3 +23,7 @@
   transform-origin: left,
 }
 
+.meterModerate{
+  @extend .meter;
+  width: 5%;
+}

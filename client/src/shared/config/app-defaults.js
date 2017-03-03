@@ -17,4 +17,11 @@ const PoliticalSpectrumColorsHSL = {
   right: `hsl(${PoliticalSpectrumHues.right}, 89%, 60%)`
 }
 
-export { PoliticalSpectrumCutoffs, PoliticalSpectrumHues, PoliticalSpectrumColorsHSL };
+const PoliticalSpectrumNumericMax = 25;
+
+export { 
+  PoliticalSpectrumCutoffs,
+  PoliticalSpectrumHues,
+  PoliticalSpectrumColorsHSL,
+  PoliticalSpectrumNumericMax
+};
