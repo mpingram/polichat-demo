@@ -34,22 +34,18 @@
   align-items: stretch;
 }
 
-.appHeaderLight{
-  @extend .appHeader;
+.appHeader.light{
 }
 
-.appHeaderDark{
-  @extend .appHeader;
+.appHeader.dark{
   box-shadow: $shadow-header;
 }
 
 
-.appFrameLight{
-  @extend .appFrame;
+.appFrame.light{
   background-color: $col-bg-light;
 }
 
-.appFrameDark{
-  @extend .appFrame;
+.appFrame.dark{
   background-color: $col-bg-dark;
 }

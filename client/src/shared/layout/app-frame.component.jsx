@@ -1,6 +1,6 @@
 import React from "react";
-import PolichatIconComponent from "../icons/polichat-icon.component";
- 
+import PolichatIcon from "../icons/polichat-icon.component";
+import ProfileIcon from "../icons/profile-icon.component";
 import styles from "./app-frame.component.scss";
 
 const propTypes = {
@@ -14,17 +14,18 @@ const appFrame = ( props ) => {
   let appFrameTheme;
   switch ( props.theme ) {
     case "inside":
-      appFrameTheme = styles.appFrameDark;
+      appFrameTheme = styles.dark;
       break;
     case "outside":
-      appFrameTheme = styles.appFrameLight;
+      appFrameTheme = styles.light;
       break;
   }
 
   return(
-    <div className={appFrameTheme}>
-      <div className={styles.appHeader} role="banner">
-        <PolichatIconComponent height="100%" />
+    <div className={ `${styles.appFrame} ${appFrameTheme}` }>
+      <div className={ `${styles.appHeader} ${appFrameTheme}`} role="banner">
+        <PolichatIcon height="100%" />
+        { props.theme === "outside" && <ProfileIcon/>}
       </div>
       <div className={styles.content} role="main">
         {props.children}

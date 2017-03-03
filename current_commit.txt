@@ -1,4 +1,9 @@
-Incorporate BoxHeader into Box
+Finish app frame header styling
 
--- add header prop to Box
--- change Box styling to header and non-header versions
+-- change AppFrame styles to use multiple css classes,
+	consistent with other components
+-- add drop shadow to app frame header in "inside" theme
+-- rename PolichatIconComponent --> PolichatIcon
+-- add ProfileIcon placeholder to app frame header in "inside" theme
+
+TODO: create ProfileIcon component

@@ -12,7 +12,7 @@ const defaultProps = {
 
 
 
-const PolichatIconComponent = ( props ) => {
+const PolichatIcon = ( props ) => {
   
   const style = {
     position: "relative",
@@ -84,6 +84,6 @@ const PolichatIconComponent = ( props ) => {
    )
 }
 
-PolichatIconComponent.propTypes = propTypes;
-PolichatIconComponent.defaultProps = defaultProps;
-export default PolichatIconComponent;
+PolichatIcon.propTypes = propTypes;
+PolichatIcon.defaultProps = defaultProps;
+export default PolichatIcon;

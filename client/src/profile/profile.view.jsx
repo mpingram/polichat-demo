@@ -14,6 +14,7 @@ const ProfileView = ( props ) => {
   return (
     <AppFrame theme="inside">
       <Box theme="inside" size="lg" headerText={{main: "Before you begin...", sub: "Let us know a little more about your political views."}}>
+        <PoliticalSpectrumUIElement message="My views on economic issues are"/>
         <PoliticalSpectrumUIElement message="My views on social issues are"/>
       </Box> 
     </AppFrame>
