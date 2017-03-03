@@ -1,0 +1,10 @@
+Complete PoliticalSpectrumUIElement
+
+-- create PoliticalSpectrumLabel component
+-- move magic color and spectrum cutoff values into config file
+-- combine meter into UIElement component
+-- simplify UIElement / child component interaction
+
+TODO: performance is still iffy, especially when max is a large int.
+	Will need to think about ways to remove work from react's
+	rendering engine as much as possible.

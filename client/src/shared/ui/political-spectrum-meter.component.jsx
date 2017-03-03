@@ -10,10 +10,12 @@ const propTypes = {
 }
 
 const PoliticalSpectrumMeter = ( props ) => {
+  
+  const color = props.color || chooseColor( props.value, props.max );
 
   return(
     <div className={style.track}>
-      <div className={style.meter} style={{ backgroundColor: chooseColor( props.value, props.max ), transform: `scaleX(${props.value/props.max})`}} />
+      <div className={style.meter} style={{ backgroundColor: color, transform: `scaleX(${props.value/props.max})`}} />
     </div>
   )
 }
