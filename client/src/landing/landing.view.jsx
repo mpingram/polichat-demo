@@ -1,8 +1,8 @@
 import * as React from "react";
 import FacebookLogin from "react-facebook-login";
 
-import AppFrame from "../shared/app-frame.component";
-import Box from "../shared/box.component";
+import AppFrame from "../shared/layout/app-frame.component";
+import Box from "../shared/layout/box.component";
 
 import styles from "./landing.view.scss";
 

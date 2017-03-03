@@ -1,12 +1,16 @@
 import React from "react";
 
-import AppFrameComponent from "../shared/app-frame.component";
+import AppFrame from "../shared/layout/app-frame.component";
+import Box from "../shared/layout/box.component";
 
 const ErrorView = () => {
-
+  
+  const theme = "outside";
   return (
-    <AppFrameComponent theme="outside">
-      <div>Implement me!</div>
+    <AppFrameComponent theme={theme}>
+      <Box theme={theme}>
+        <div>Implement me!</div>
+      </Box>
     </AppFrameComponent>
   )
 

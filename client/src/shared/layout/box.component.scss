@@ -1,10 +1,10 @@
-@import "~../shared/styles/variables";
+@import "~../styles/variables";
 
 .box{
   flex: 0 0 auto;
 
   margin: 0 auto;
-  padding: 2em;
+  //padding: 2em;
   border-radius: 12px;
 
   box-shadow: $shadow-low;

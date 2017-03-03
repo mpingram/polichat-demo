@@ -1,5 +1,5 @@
 import React from "react";
-import PolichatIconComponent from "./icons/polichat-icon.component";
+import PolichatIconComponent from "../icons/polichat-icon.component";
  
 import styles from "./app-frame.component.scss";
 

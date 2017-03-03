@@ -1,7 +1,9 @@
 import React from "react";
 
-import AppFrame from "../shared/app-frame.component";
-import Box from "../shared/box.component";
+import AppFrame from "../shared/layout/app-frame.component";
+import Box from "../shared/layout/box.component";
+import BoxHeader from "../shared/layout/box-header.component";
+
 import PoliticalSpectrumUIElement from "../shared/ui/political-spectrum-ui-element.component";
 
 const propTypes = {
@@ -14,10 +16,9 @@ const ProfileView = ( props ) => {
   return (
     <AppFrame theme="inside">
       <Box theme="inside" size="lg">
-
+        <BoxHeader />
         <PoliticalSpectrumUIElement message="My views on social issues are"/>
-
-      </Box>
+      </Box> 
     </AppFrame>
   )
 
