@@ -1,5 +1,4 @@
-Create BoxHeader component
+Incorporate BoxHeader into Box
 
--- add BoxHeader to profile view
--- move AppFrame, Box, and BoxHeader to shared/layout
--- update views to reference shared/layout in imports
+-- add header prop to Box
+-- change Box styling to header and non-header versions

@@ -4,7 +4,11 @@ import style from "./box.component.scss";
 
 const propTypes = {
   theme: React.PropTypes.oneOf(["inside", "outside", "layout"]).isRequired,
-  size: React.PropTypes.oneOf(["sm", "med", "lg", "short-wide", "med-wide"]).isRequired
+  size: React.PropTypes.oneOf(["sm", "med", "lg", "short-wide", "med-wide"]).isRequired,
+  headerText: React.PropTypes.shape({
+    main: React.PropTypes.string,
+    sub: React.PropTypes.string
+  })
 }
 
 const Box = ( props ) => {
@@ -47,11 +51,32 @@ const Box = ( props ) => {
       break;
   }
 
-  return (
-    <div className={ `${style.box} ${theme} ${width} ${height}` }>
-      {props.children}
-    </div>
-  )
+  const hasHeader = props.headerText !== undefined;
+  
+  let boxComponent;
+  
+  if ( !hasHeader ){
+    boxComponent = (
+      <div className={ `${style.boxNoHeader} ${theme} ${width} ${height}` }>
+        {props.children}
+      </div>
+    )
+
+  } else if ( hasHeader ){
+    boxComponent = (
+      <div className={ `${style.boxHeader} ${theme} ${width} ${height}` }>
+        <div className={style.header}>
+          <div className={style.headerMainText}>{props.headerText.main}</div>
+          <div className={style.headerSubText}>{props.headerText.sub}</div>
+        </div>
+        <div className={style.boxContentWrapper} >
+          {props.children}
+        </div>
+      </div>
+    )
+  }
+
+  return boxComponent;
 }
 
 Box.propTypes = propTypes;

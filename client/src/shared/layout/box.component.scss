@@ -1,6 +1,6 @@
 @import "~../styles/variables";
 
-.box{
+.boxBase{
   flex: 0 0 auto;
 
   margin: 0 auto;
@@ -10,13 +10,40 @@
   box-shadow: $shadow-low;
   
   text-align: center;
+  
+  max-width: 95%;
+}
 
+.boxHeader{
+  @extend .boxBase;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
+}
+
+.boxNoHeader{
+  @extend .boxBase;
+  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   
-  max-width: 95%;
+}
+
+.boxContentWrapper{
+  flex: 1 0 auto;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 // box sizes
@@ -62,4 +89,36 @@
   background: none;
   box-shadow: none;
   border-radius: none;
+}
+
+
+.header{
+  width: 100%;
+  flex: 0.05 0 85px;
+    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  padding: 20px;
+  
+  border-radius: $border-radius-lg $border-radius-lg 0px 0px;
+
+  background-color: $col-neutral;
+}
+
+.headerMainText{
+  width: 100%;
+  color: $col-bg-dark;
+  font-size: 2.25em;
+  text-align: left;
+}
+
+.headerSubText{
+  align-self: baseline;
+  margin-left: 5em;
+  color: $col-text-black;
+  font-size: 1.25em;
+  text-align: left;
 }

@@ -2,7 +2,6 @@ import React from "react";
 
 import AppFrame from "../shared/layout/app-frame.component";
 import Box from "../shared/layout/box.component";
-import BoxHeader from "../shared/layout/box-header.component";
 
 import PoliticalSpectrumUIElement from "../shared/ui/political-spectrum-ui-element.component";
 
@@ -12,11 +11,9 @@ const propTypes = {
 
 const ProfileView = ( props ) => {
   
-
   return (
     <AppFrame theme="inside">
-      <Box theme="inside" size="lg">
-        <BoxHeader />
+      <Box theme="inside" size="lg" headerText={{main: "Before you begin...", sub: "Let us know a little more about your political views."}}>
         <PoliticalSpectrumUIElement message="My views on social issues are"/>
       </Box> 
     </AppFrame>
