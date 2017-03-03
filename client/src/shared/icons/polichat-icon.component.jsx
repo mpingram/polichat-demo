@@ -1,33 +1,13 @@
-import * as React from "react";
+import React from "react";
+import { PoliticalSpectrumColorsHex as colors } from "../config/app-defaults";
 
-const propTypes = {
-  width: React.PropTypes.string,
-  height: React.PropTypes.string
-}
-
-const defaultProps = {
-  width: undefined,
-  height: "100%"
-}
-
+import style from "./polichat-icon.component.scss";
 
 
 const PolichatIcon = ( props ) => {
   
-  const style = {
-    position: "relative",
-    padding: "0.5em 0.5em 0.5em 1.5em",
-  }
-  // size logo according to given height
-  // or width, but not both.
-  if ( props.height ){
-    style.height = props.height;
-  } else if ( props.width ){
-    style.width = props.width;
-  }
-
   return (
-      <div id="polichat-icon-wrapper" style={style}>
+      <div className={style.iconContainer}>
 
        <svg height="100%" viewBox="-0.301 -0.199 504 138" xmlns="http://www.w3.org/2000/svg" >
             
@@ -84,6 +64,4 @@ const PolichatIcon = ( props ) => {
    )
 }
 
-PolichatIcon.propTypes = propTypes;
-PolichatIcon.defaultProps = defaultProps;
 export default PolichatIcon;

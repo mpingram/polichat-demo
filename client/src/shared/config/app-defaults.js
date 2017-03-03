@@ -17,11 +17,25 @@ const PoliticalSpectrumColorsHSL = {
   right: `hsl(${PoliticalSpectrumHues.right}, 89%, 60%)`
 }
 
+const PoliticalSpectrumColorsHex = {
+  left: "#7D3DF4",
+  center: "#F43DF4",
+  right: "#F43D3D"
+}
+
+const AppColors = {
+  light: "#fefcfc",
+  neutral: "#e6e6e6",
+  dark: "#ff5d55",
+}
+
 const PoliticalSpectrumNumericMax = 25;
 
 export { 
   PoliticalSpectrumCutoffs,
   PoliticalSpectrumHues,
   PoliticalSpectrumColorsHSL,
-  PoliticalSpectrumNumericMax
+  PoliticalSpectrumColorsHex,
+  PoliticalSpectrumNumericMax,
+  AppColors,
 };

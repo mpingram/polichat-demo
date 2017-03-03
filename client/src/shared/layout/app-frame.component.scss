@@ -14,11 +14,20 @@
 }
 
 .appHeader{
+
+  padding: 0.5em 2em;
+  position: relative;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   width: 100%;
   flex: 0 0 auto;
   height: 60px;
   background-color: $col-bg-light;
 }
+
 @media (max-width:400px) {
   .appHeader{
     flex: 0 0 40px;

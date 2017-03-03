@@ -25,7 +25,7 @@ const appFrame = ( props ) => {
     <div className={ `${styles.appFrame} ${appFrameTheme}` }>
       <div className={ `${styles.appHeader} ${appFrameTheme}`} role="banner">
         <PolichatIcon height="100%" />
-        { props.theme === "outside" && <ProfileIcon/>}
+        { props.theme === "inside" && <ProfileIcon/>}
       </div>
       <div className={styles.content} role="main">
         {props.children}
