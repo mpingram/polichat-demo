@@ -1,7 +1,4 @@
-Create ProfileIcon, modify PolichatIcon
+[WIP] Add country and party picker to profile view
 
--- add cool button styling, but may have to remove for mobile
--- PolichatIcon: move styles into separate .scss file
--- PolichatIcon: remove props
-
-TODO: dropdown menu, link to profileView with firstTime=false
+-- move PoliticalSpectrumUIElement to profile folder
+-- create DropdownMenu component

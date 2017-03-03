@@ -5,7 +5,8 @@ $slider-height: 10px;
 $slider-border: none;
 $slider-track-color: none;
 
-$handle-color: #fff;
+$handle-color: $col-bg-light;
+$handle-border: 4px solid $col-neutral-dark;
 $handle-height: 35px;
 $handle-width: $handle-height;
 
@@ -29,8 +30,8 @@ input[type=range]::-webkit-slider-runnable-track {
   border: $slider-border;
 }
 input[type=range]::-webkit-slider-thumb {
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: $handle-border;
   height: $handle-height;
   width: $handle-width;
   border-radius: 50%;
@@ -55,7 +56,7 @@ input[type=range]::-moz-range-track {
 input[type=range]::-moz-range-thumb {
   z-index: 10;  
   //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  border: $handle-border;
   height: $handle-height;
   width: $handle-width;
   border-radius: 50%;
@@ -87,7 +88,7 @@ input[type=range]::-ms-fill-upper {
 input[type=range]::-ms-thumb {
   z-index: 10;
   //box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-  border: 1px solid #000000;
+  border: $handle-border;
   height: $handle-height;
   width: $handle-width;
   border-radius: 3px;
