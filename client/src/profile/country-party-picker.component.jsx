@@ -1,7 +1,6 @@
 import React from "react";
 
-import CountryList from "../shared/config/app-defaults";
-import PoliticalPartyListLookup from "../shared/config/app-defaults";
+import { CountryList, PoliticalPartyListLookup } from "../shared/config/app-defaults";
 
 import style from "./country-party-picker.component.scss";
 
@@ -11,11 +10,14 @@ class CountryPartyPicker extends React.Component {
   
   constructor( props ){
     super(props);
-  
+    
     this.state = {
       selectedCountry: undefined,
     }
     
+    this.countryList = CountryList;
+    this.partyMap = PoliticalPartyListLookup;
+
     this.handleCountrySelection = ( ev ) => {
       console.log( ev.target.value );
     }
@@ -32,15 +34,16 @@ class CountryPartyPicker extends React.Component {
       <div className={style.container}>
         
         <div className={style.countryPartyContainer} >
-          <DropdownMenu active="true" onSelection={this.handleCountrySelection} >
-            {CountryList}
+
+          <DropdownMenu 
+            optionsList={this.countryList}
+            active="true" 
+            onSelection={this.handleCountrySelection} >
           </DropdownMenu>
 
-          <DropdownMenu active={this.state.selectedCountry !== undefined} onSelection={this.handlePartySelection} >
-            {this.state.selectedCountry !== undefined && PoliticalPartyListLookup[this.state.selectedCountry]}
-          </DropdownMenu>
 
         </div>
+
         <div className={style.onlyOwnCountryContainer} >
 
         </div>

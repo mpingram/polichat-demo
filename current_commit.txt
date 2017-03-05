@@ -1,4 +1,4 @@
-[WIP] Add country and party picker to profile view
+Working, unstyled country/party pickers
 
--- move PoliticalSpectrumUIElement to profile folder
--- create DropdownMenu component
+TODO: need a map of political parties by country(!). Will consider
+	only using acronyms for speed right now

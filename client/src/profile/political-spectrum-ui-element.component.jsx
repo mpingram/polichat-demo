@@ -1,11 +1,11 @@
 import React from "react";
 
-import PoliticalSpectrumMeter from "./political-spectrum-meter.component.jsx";
-import PoliticalSpectrumLabel from "./political-spectrum-label.component.jsx";
+import PoliticalSpectrumMeter from "../shared/ui/political-spectrum-meter.component.jsx";
+import PoliticalSpectrumLabel from "../shared/ui/political-spectrum-label.component.jsx";
 
-import chooseColor from "../utils/choose-color";
+import chooseColor from "../shared/utils/choose-color";
 
-import { PoliticalSpectrumNumericMax } from "../config/app-defaults";
+import { PoliticalSpectrumNumericMax } from "../shared/config/app-defaults";
 
 import "./political-spectrum-ui-element.component.scss";
 
