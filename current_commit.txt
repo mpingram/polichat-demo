@@ -1,4 +1,6 @@
-Working, unstyled country/party pickers
+Finish country/party picker dropdowns
 
-TODO: need a map of political parties by country(!). Will consider
-	only using acronyms for speed right now
+-- fixes to parse-political-parties script
+-- standardized country list and partyCountryMap
+-- rename country-party-picker -> country-party-ui-element
+-- wire together country dropdown menu and party dropdown menu

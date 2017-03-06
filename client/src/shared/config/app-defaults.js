@@ -1,5 +1,5 @@
 import CountryList from "./country-list";
-const PoliticalPartyListLookup = [];
+import PartyCountryMap from "./party-country-map.json";
 
 const PoliticalSpectrumCutoffs = {
   moderate: 0.25,
@@ -45,5 +45,5 @@ export {
   PoliticalSpectrumNumericMax,
   AppColors,
   CountryList,
-  PoliticalPartyListLookup,
+  PartyCountryMap,
 };

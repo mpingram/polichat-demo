@@ -1,0 +1,41 @@
+@import "~../shared/styles/variables";
+
+.container{
+
+  flex: 0.25 1 6em;
+
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-around;
+
+  font-size: 1.25em;
+}
+
+.countryPartyContainer{
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.dropdownContainer{
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.preferencesContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.radioButtonContainer{
+  text-align: left;
+  margin-bottom: 1em;
+}
