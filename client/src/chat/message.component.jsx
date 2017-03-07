@@ -9,12 +9,23 @@ const propTypes = {
 };
 
 const Message = ( props ) => {
+  
+  let selfOrOtherStyling;
+  if ( props.sender === "self" ){
+    selfOrOtherStyling = style.self;
+  } else {
+    selfOrOtherStyling = style.other;
+  }
+
+  const messageContainerStyle = `${style.messageContainer} ${selfOrOtherStyling}`;
+  const messageStyle = `${style.message} ${selfOrOtherStyling}`;
+  const messageSenderTagStyle = `${style.messageSenderTag} ${selfOrOtherStyling}`;
   return(
-    <div className={style.messageContainer}>
-      <div className={style.message}>
+    <div className={messageContainerStyle}>
+      <div className={messageStyle}>
         {props.text}
       </div>
-      <div className={style.messageSenderTag}>
+      <div className={messageSenderTagStyle}>
         {props.sent.toTimeString()} 
         <span className={style.sender}> 
           {props.sender}

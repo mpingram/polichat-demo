@@ -1,4 +1,9 @@
-Scaffold ChatWindow, Message components
+Chat styling
 
--- sketch out ChatWindow component and styling
--- create Message component and styling
+-- message styling
+-- differentiate self/other messages styling
+-- Chat window scrolling properly
+
+TODO: fix up self/other styling
+TODO: write scroll to bottom chat window code
+ -- disable unless near bottom of chat

@@ -14,16 +14,29 @@
   width: auto;
   height: auto;
   
-  background-color: $col-neutral;
   padding: 0.5em;
   margin: 0.5em 1em;
 
   text-align: left;
+}
 
+.message.self{
+  background-color: $col-neutral;
+  float: right;
+}
+
+.message.other{
+  background-color: $col-message-other;
+  float: left;
+  clear: both;
 }
 
 .messageSenderTag{
-  
+  clear: both;  
+}
+.messageSenderTag.self{
+  float: right;
+}
+.messageSenderTag.other{
   float: left;
-  
 }

@@ -1,1 +1,12 @@
 @import "~../shared/styles/variables";
+
+.message{
+  position: relative;
+  width: auto;
+  height: auto;
+  
+  padding: 0.5em;
+  margin: 0.5em 1em;
+
+  text-align: left;
+}

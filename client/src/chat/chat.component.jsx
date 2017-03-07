@@ -6,6 +6,9 @@ import PartnerConnectionCard from "./partner-connection-card.component";
 
 import style from "./chat.component.scss";
 
+// DEVELOPMENT
+import testMessages from "../shared/config/test-messages";
+
 const propTypes = {
   firstTimeUser: React.PropTypes.bool
 };
@@ -51,11 +54,7 @@ class Chat extends React.Component {
     this.state = {
       active: props.firstTimeUser === true ? false : true,
       partnerProfile: undefined, // ProfileObject
-      messages: [{
-        text: "Hello World!",
-        sender: "Michael",
-        sent: new Date()
-      }], // MessageObject[]
+      messages: testMessages, // MessageObject[]
       otherTyping: false,
       selfTyping: false,
       connected: false,

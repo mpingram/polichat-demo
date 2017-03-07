@@ -1,12 +1,12 @@
 import React from "react";
 
-import messageStyle from "./message.component.scss";
+import style from "./typing-feedback-message.component.scss";
 
 import TypingFeedbackIcon from "../shared/icons/typing-feedback-icon.component";
 
 const TypingFeedbackMessage = () => {
   return (
-    <div className={messageStyle.message}>
+    <div className={style.message}>
       <TypingFeedbackIcon/>
     </div>
   )

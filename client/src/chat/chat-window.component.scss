@@ -1,8 +1,14 @@
 @import "~../shared/styles/variables";
 
 .window{
-  flex: 1 1 auto;
+  flex: 1 0 600px;
   border: 1px solid $col-text-grey;
+
+  overflow-y: auto;
+  max-height: 100%;
 }
 
+.window-inner-wrapper{
+
+}
 

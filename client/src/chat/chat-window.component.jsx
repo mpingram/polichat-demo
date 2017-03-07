@@ -12,23 +12,25 @@ const propTypes = {
 
 const defaultProps = {
   messages: [],
-  partnerTyping: false
+  partnerTyping: true
 };
 
 const ChatWindow = ( props ) => {
 
   return (
     <div className={style.window}>
-      { props.messages.map( (message, i) => {
-          return <Message 
-                    key={message.sent.getTime()} 
-                    text={message.text} 
-                    sent={message.sent} 
-                    sender={message.sender} 
-                  />
-        })}
-
-      { props.partnerTyping ? <TypingFeedbackMessage/> : undefined }
+      <div className={style.windowInnerWrapper}>
+        { props.messages.map( (message, i) => {
+            return <Message 
+                      key={message.sent.valueOf()} 
+                      text={message.text} 
+                      sent={message.sent} 
+                      sender={message.sender} 
+                    />
+          })}
+      
+        { props.partnerTyping ? <TypingFeedbackMessage/> : undefined }
+      </div>
     </div>
   )
 };
