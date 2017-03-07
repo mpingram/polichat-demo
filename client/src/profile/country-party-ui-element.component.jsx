@@ -43,7 +43,7 @@ class CountryPartyUIElement extends React.Component {
         <div className={style.countryPartyContainer} >
           
           <div className={style.dropdownContainer}>
-            My country is... 
+            The country I live in is... 
             <DropdownMenu 
               optionsList={this.countryList}
               value={this.state.selectedCountry}
@@ -53,7 +53,7 @@ class CountryPartyUIElement extends React.Component {
           </div>
 
           <div className={style.dropdownContainer}>
-            The political party I'm most closely affiliated with is... 
+            My political party is...
             <DropdownMenu 
               optionsList={ this.partyMap[ this.state.selectedCountry ] }
               value={this.state.selectedParty}

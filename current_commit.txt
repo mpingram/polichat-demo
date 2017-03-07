@@ -1,6 +1,5 @@
-Finish country/party picker dropdowns
+scaffold chat view
 
--- fixes to parse-political-parties script
--- standardized country list and partyCountryMap
--- rename country-party-picker -> country-party-ui-element
--- wire together country dropdown menu and party dropdown menu
+-- add submit-icon
+-- add Chat, ChatWindow, ChatInput, and PartnerConnectionCard
+-- scaffold Chat stateful component

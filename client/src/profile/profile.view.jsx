@@ -7,13 +7,13 @@ import PoliticalSpectrumUIElement from "./political-spectrum-ui-element.componen
 import CountryPartyUIElement from "./country-party-ui-element.component";
 
 const propTypes = {
-  firstTimeSetup: React.PropTypes.bool,
+  firstTimeUser: React.PropTypes.bool,
 }
 
 const ProfileView = ( props ) => {
   
   let headerText;
-  if ( props.firstTimeSetup === true ){
+  if ( props.firstTimeUser === true ){
     headerText = {
       main: "Before you begin...", 
       sub: "Let us know a little more about your political views."

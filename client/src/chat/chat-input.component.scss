@@ -1,0 +1,32 @@
+@import "~../shared/styles/variables";
+
+.chatInputWrapper{
+  width: 100%;
+  flex: 0.2 0 3em;
+
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-end;
+}
+
+.chatInput{
+  font-family: $sans-font-stack;
+  font-size: 1em;
+
+  overflow: auto;
+  resize: none;
+
+  border-radius: $border-radius-lg;
+  border: 1px solid $col-text-grey;
+  padding: 10px;
+  text-align: left;
+  flex: 0.95 0 auto;
+}
+
+.submitButton{
+  min-width: 5em;
+  background-color: green;
+  flex: 0.05 0 2em;
+}
+
