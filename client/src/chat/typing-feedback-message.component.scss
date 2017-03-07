@@ -1,11 +1,18 @@
 @import "~../shared/styles/variables";
 
 .message{
+  float: left;
+  clear: both;
+  
+  border-radius: $border-radius-lg;
+  background-color: $col-message-other;
+  
   position: relative;
   width: auto;
-  height: auto;
-  
-  padding: 0.5em;
+
+  line-height: 100%;
+  font-size: 1.15em;
+  padding: 0.5em 0.75em;
   margin: 0.5em 1em;
 
   text-align: left;

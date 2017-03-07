@@ -7,7 +7,7 @@ import TypingFeedbackIcon from "../shared/icons/typing-feedback-icon.component";
 const TypingFeedbackMessage = () => {
   return (
     <div className={style.message}>
-      <TypingFeedbackIcon/>
+      . . .
     </div>
   )
 };

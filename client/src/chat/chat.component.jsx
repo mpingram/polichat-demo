@@ -27,8 +27,14 @@ class Chat extends React.Component {
 
     };
     
-    this.handleSendMessage = ( ev ) => {
-
+    this.handleSendMessage = ( message ) => {
+      message.prevSelfMessage = this.state.lastSelfMessage;
+      console.log( message );
+      this.setState({
+        selfTyping: false,
+        messages: this.state.messages.concat( message ),
+        lastSelfMessage: message.sent
+      });
     };
 
     this.handleRecieveMessage = ( ev ) => {
@@ -58,7 +64,7 @@ class Chat extends React.Component {
       otherTyping: false,
       selfTyping: false,
       connected: false,
-      sending: false,
+      lastSelfMessage: undefined, // Date
     };
 
   }

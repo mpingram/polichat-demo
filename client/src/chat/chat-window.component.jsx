@@ -19,7 +19,6 @@ const ChatWindow = ( props ) => {
 
   return (
     <div className={style.window}>
-      <div className={style.windowInnerWrapper}>
         { props.messages.map( (message, i) => {
             return <Message 
                       key={message.sent.valueOf()} 
@@ -30,7 +29,6 @@ const ChatWindow = ( props ) => {
           })}
       
         { props.partnerTyping ? <TypingFeedbackMessage/> : undefined }
-      </div>
     </div>
   )
 };

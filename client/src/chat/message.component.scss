@@ -3,20 +3,28 @@
 .messageContainer{
   
   position: relative;
-
+  margin: 0.5em 1em;
   height: auto;
   width: auto;
   max-width: 75%;
-  
+  clear: both;
+
+}
+
+.messageContainer.self{
+  float: right;
+}
+
+.messageContainer.other{
+  float:left;
 }
 
 .message{
+  border-radius: $border-radius-lg;
   width: auto;
   height: auto;
   
   padding: 0.5em;
-  margin: 0.5em 1em;
-
   text-align: left;
 }
 
@@ -32,6 +40,8 @@
 }
 
 .messageSenderTag{
+  margin: 5px 0.5em 0 0.5em;
+  font-size: 0.8em;
   clear: both;  
 }
 .messageSenderTag.self{
@@ -39,4 +49,13 @@
 }
 .messageSenderTag.other{
   float: left;
+}
+
+.sender{
+  
+}
+
+.timestamp{
+  font-size: 0.85em;
+  color: $col-text-light-grey;
 }

@@ -4,6 +4,8 @@ Chat styling
 -- differentiate self/other messages styling
 -- Chat window scrolling properly
 
+TODO: remove repeated MessageSenderTags
 TODO: fix up self/other styling
 TODO: write scroll to bottom chat window code
  -- disable unless near bottom of chat
+ -- enable when user typing
