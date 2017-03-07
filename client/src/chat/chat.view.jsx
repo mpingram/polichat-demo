@@ -19,6 +19,6 @@ const ChatView = () => {
     </AppFrame>
   )
 
-}
+};
 
 export default ChatView;

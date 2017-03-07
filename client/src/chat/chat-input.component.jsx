@@ -27,4 +27,5 @@ const ChatInput = ( props ) => {
   )
 };
 
+ChatInput.propTypes = propTypes;
 export default ChatInput;

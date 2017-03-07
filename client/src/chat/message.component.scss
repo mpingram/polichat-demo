@@ -1,0 +1,29 @@
+@import "~../shared/styles/variables";
+
+.messageContainer{
+  
+  position: relative;
+
+  height: auto;
+  width: auto;
+  max-width: 75%;
+  
+}
+
+.message{
+  width: auto;
+  height: auto;
+  
+  background-color: $col-neutral;
+  padding: 0.5em;
+  margin: 0.5em 1em;
+
+  text-align: left;
+
+}
+
+.messageSenderTag{
+  
+  float: left;
+  
+}

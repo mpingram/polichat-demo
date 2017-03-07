@@ -1,5 +1,4 @@
-scaffold chat view
+Scaffold ChatWindow, Message components
 
--- add submit-icon
--- add Chat, ChatWindow, ChatInput, and PartnerConnectionCard
--- scaffold Chat stateful component
+-- sketch out ChatWindow component and styling
+-- create Message component and styling

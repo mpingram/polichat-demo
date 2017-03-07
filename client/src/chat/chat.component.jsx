@@ -8,7 +8,7 @@ import style from "./chat.component.scss";
 
 const propTypes = {
   firstTimeUser: React.PropTypes.bool
-}
+};
 
 class Chat extends React.Component {
   
@@ -51,7 +51,11 @@ class Chat extends React.Component {
     this.state = {
       active: props.firstTimeUser === true ? false : true,
       partnerProfile: undefined, // ProfileObject
-      messages: [], // MessageObject[]
+      messages: [{
+        text: "Hello World!",
+        sender: "Michael",
+        sent: new Date()
+      }], // MessageObject[]
       otherTyping: false,
       selfTyping: false,
       connected: false,
@@ -61,12 +65,10 @@ class Chat extends React.Component {
   }
   render(){
     
-    const className = `${style.chatContainer} ${this.state.active ? undefined : style.deactivated}`; 
-
     return(
-      <div className={className}>
+      <div className={style.chatContainer}>
         <PartnerConnectionCard profile={this.state.partnerProfile} onFlagUser={this.handleFlagUser} onDisconnect={this.handleDisconnect} />
-        <ChatWindow active={this.state.active} messages={this.state.messageList} typing={this.state.typing} />
+        <ChatWindow messages={this.state.messages} partnerTyping={this.state.typing} />
         <ChatInput onTyping={this.handleSelfTyping} onSendMessage={this.handleSendMessage} />
       </div>
     )
