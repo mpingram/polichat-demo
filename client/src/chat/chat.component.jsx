@@ -55,7 +55,15 @@ class Chat extends React.Component {
 
     this.state = {
       active: props.firstTimeUser === true ? false : true,
-      partnerProfile: undefined, // ProfileObject
+      // DEVELOPMENT
+      partnerProfile: {
+        name: "Testyface",
+        country: "United States",
+        issue: {
+          name: "Gun Control",
+          stance: -74
+        }
+      }, // ProfileObject
       messages: testMessages, // MessageObject[]
       otherTyping: false,
       selfTyping: false,
@@ -70,8 +78,10 @@ class Chat extends React.Component {
     return(
       <div className={style.chatContainer}>
         <PartnerConnectionCard profile={this.state.partnerProfile} onFlagUser={this.handleFlagUser} onDisconnect={this.handleDisconnect} />
-        <ChatWindow messages={this.state.messages} partnerTyping={this.state.partnerTyping} scrollToBottom={this.state.scrollToBottomOfChat} />
-        <ChatInput onTyping={this.handleSelfTyping} onSendMessage={this.handleSendMessage} /> 
+        <div className={style.chatWindowContainer}>
+          <ChatWindow messages={this.state.messages} partnerTyping={this.state.partnerTyping} scrollToBottom={this.state.scrollToBottomOfChat} />
+          <ChatInput onTyping={this.handleSelfTyping} onSendMessage={this.handleSendMessage} /> 
+        </div>
       </div>
     )
   }

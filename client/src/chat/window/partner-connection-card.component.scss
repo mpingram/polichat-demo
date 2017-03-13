@@ -1,0 +1,52 @@
+@import "~../../shared/styles/variables";
+
+.card{
+  flex: 0 0 200px;
+
+  flex-direction: column;
+  order: 99;
+
+  display: flex;
+}
+
+@media (max-width: $breakpoints-small-screen){
+  .card{
+    flex: 0 0 80px;
+    order: initial;
+    flex-direction: row;
+    z-index: 1;
+    box-shadow: $shadow-tiny;
+    border: 1px solid $col-neutral;
+  }
+}
+
+.nameBlock{
+
+}
+
+.name{
+
+}
+
+.country{
+
+}
+
+
+.issueBlock{
+
+}
+
+.issue{
+
+}
+
+
+.flagBlock{
+
+}
+
+.disconnectBlock{
+
+}
+
