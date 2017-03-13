@@ -1,8 +1,8 @@
 import React from "react";
 
-import ChatWindow from "./chat-window.component";
-import ChatInput from "./chat-input.component";
-import PartnerConnectionCard from "./partner-connection-card.component";
+import ChatWindow from "./window/chat-window.component";
+import ChatInput from "./window/chat-input.component";
+import PartnerConnectionCard from "./window/partner-connection-card.component";
 
 import style from "./chat.component.scss";
 
@@ -17,23 +17,19 @@ class Chat extends React.Component {
   
   constructor( props ){
     super( props );
-  
-
-    this.handleSelfTyping = ( ev ) => {
-      console.log("Self is typing...");
-    };
-
-    this.handlePartnerTyping = ( ev ) => {
-
-    };
     
+    this.handleSelfTyping = ( ev ) => {
+      console.log( "self is typing..." );
+    }
+
     this.handleSendMessage = ( message ) => {
       message.prevSelfMessage = this.state.lastSelfMessage;
       console.log( message );
       this.setState({
         selfTyping: false,
         messages: this.state.messages.concat( message ),
-        lastSelfMessage: message.sent
+        lastSelfMessage: message.sent,
+        scrollToBottomOfChat: true,
       });
     };
 
@@ -65,6 +61,7 @@ class Chat extends React.Component {
       selfTyping: false,
       connected: false,
       lastSelfMessage: undefined, // Date
+      scrollToBottomOfChat: false,
     };
 
   }
@@ -73,8 +70,8 @@ class Chat extends React.Component {
     return(
       <div className={style.chatContainer}>
         <PartnerConnectionCard profile={this.state.partnerProfile} onFlagUser={this.handleFlagUser} onDisconnect={this.handleDisconnect} />
-        <ChatWindow messages={this.state.messages} partnerTyping={this.state.typing} />
-        <ChatInput onTyping={this.handleSelfTyping} onSendMessage={this.handleSendMessage} />
+        <ChatWindow messages={this.state.messages} partnerTyping={this.state.partnerTyping} scrollToBottom={this.state.scrollToBottomOfChat} />
+        <ChatInput onTyping={this.handleSelfTyping} onSendMessage={this.handleSendMessage} /> 
       </div>
     )
   }

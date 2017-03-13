@@ -1,9 +1,9 @@
 import React from "react";
 import Textarea from "react-textarea-autosize";
 
-import SubmitIcon from "../shared/icons/submit-icon.component";
+import SubmitIcon from "../../shared/icons/submit-icon.component";
 
-import debounce from "../shared/utils/debounce";
+import debounce from "../../shared/utils/debounce";
 
 import style from "./chat-input.component.scss";
 

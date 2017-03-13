@@ -1,4 +1,4 @@
-@import "~../shared/styles/variables";
+@import "~../../shared/styles/variables";
 
 .window{
   background-color: darken( $col-bg-light, 1% );
@@ -10,5 +10,3 @@
   overflow-y: auto;
   max-height: 100%;
 }
-
-

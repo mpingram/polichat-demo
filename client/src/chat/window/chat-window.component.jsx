@@ -1,8 +1,8 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { findDOMNode } from "react-dom";
 
-import Message from "./message.component";
-import TypingFeedbackMessage  from "./typing-feedback-message.component";
+import Message from "../message/message.component";
+import TypingFeedbackMessage  from "../message/typing-feedback-message.component";
 
 import style from "./chat-window.component.scss";
 
@@ -29,15 +29,8 @@ class ChatWindow extends React.Component {
 
     this.scrollToBottom = () => {
       console.log("scroll to bottom");
-      const messageEnd = ReactDOM.findDOMNode( this.messageEnd );
-      try {
-        messageEnd.scrollIntoView({
-          behavior: "smooth",
-          block: "end"
-        });
-      } catch(e) {
-        messageEnd.scrollIntoView(false);
-      }
+      const thisNode = findDOMNode( this );
+      thisNode.scrollTop = thisNode.scrollHeight;
     }
 
     this.handleScroll = () => {
@@ -45,11 +38,12 @@ class ChatWindow extends React.Component {
         this.setState({
           scrollAdjusted: true
         });
+        console.log("self scrolled.")
       }
     }
   }
 
-  componentWillUpdate(){
+  componentDidUpdate(){
     if ( this.props.scrollToBottom === true || this.state.scrollAdjusted === false ){
       this.scrollToBottom();
     }
@@ -68,7 +62,7 @@ class ChatWindow extends React.Component {
             })}
         
           { this.props.partnerTyping ? <TypingFeedbackMessage/> : undefined }
-          <div style={{position: "relative", float: "left", clear: "both"}} ref={ (el) => { this.messageEnd = el; } } />
+          <div style={{position: "relative", float: "right", clear: "both"}} ref={ (el) => { this.messageEnd = el; } } />
       </div>
     )
   }

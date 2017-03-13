@@ -1,11 +1,11 @@
-Chat styling
+Chat window scroll to bottom
 
--- message styling
--- differentiate self/other messages styling
--- Chat window scrolling properly
+-- reorganize chat file structure
 
-TODO: remove repeated MessageSenderTags
-TODO: fix up self/other styling
-TODO: write scroll to bottom chat window code
- -- disable unless near bottom of chat
- -- enable when user typing
+Note: everything needs more wiring, for example the logic
+to only scroll on reciept of new message if user hasn't scrolled
+upwards is only scaffolded. But the current code should be pretty
+browser-resistant!
+
+TODO: create partner connection card
+TODO: Redo profile view
