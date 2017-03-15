@@ -3,7 +3,7 @@
 .window{
   background-color: darken( $col-bg-light, 1% );
 
-  flex: 1 0 600px;
+  flex: 1 1 600px;
   border: 1px solid $col-text-grey;
   overflow-y: auto;
   max-height: 100%;
@@ -16,6 +16,6 @@
 @media (max-width: $breakpoints-small-screen){
   .window{
     border-top: none;
-    border-radius: 0 0 0 $border-radius-med;
+    border-radius: 0 0 0 0;
   }
 }

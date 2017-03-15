@@ -24,25 +24,31 @@ const PartnerConnectionCard = ( props ) => {
   return (
     <div className={style.card}>
 
-      <div className={style.nameBlock}>
+      <div className={style.block}>
         You're talking with
-        <div className={style.name}>
+        <div className={style.emphasis}>
           {profile.name}
         </div>
-        <div className={style.country}>
+        <div>
           {profile.country}
         </div>
       </div>
       
-      <div className={style.issueBlock}>
+      <div className={style.block}>
         You disagree about
-        <div className={style.issue}>
+        <div className={style.emphasis}>
           {profile.issue.name}
         </div>
       </div>
 
-      <div className={style.flagBlock}>
+      <div className={style.block}>
+        Report this user for abusive behavior.
+      </div>
 
+      <div className={style.block}>
+        <div className={style.emphasis}>
+          Disconnect from this conversation
+        </div>
       </div>
 
 

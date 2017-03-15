@@ -1,31 +1,52 @@
 @import "~../../shared/styles/variables";
 
 .card{
-  flex: 0 0 200px;
+  flex: 0 1 200px;
 
   flex-direction: column;
   order: 99;
 
   display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  
+  font-size: 0.8em;
+  color: $col-text-grey;
+  text-align: center;
+  vertical-align: center;
+
+  padding: 0.5em;
 }
 
 @media (max-width: $breakpoints-small-screen){
   .card{
-    flex: 0 0 80px;
+    flex: 0 1 80px;
     order: initial;
     flex-direction: row;
     z-index: 1;
     box-shadow: $shadow-tiny;
-    border: 1px solid $col-neutral;
   }
 }
 
-.nameBlock{
+.emphasis{
+  font-size: 1.15em;
+  color: default;
+}
 
+.block{
+  margin: 0 1em;
+  flex: 1 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nameBlock{
 }
 
 .name{
-
+  @extend .emphasis;
 }
 
 .country{
@@ -38,7 +59,7 @@
 }
 
 .issue{
-
+  @extend .emphasis;
 }
 
 

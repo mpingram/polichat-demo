@@ -37,8 +37,8 @@ class Chat extends React.Component {
 
     };
 
-    this.handleFlagPartner = ( ev ) => {
-
+    this.handleFlagUser = ( profile ) => {
+      
     };
 
     this.handleSelfFlagged = ( ev ) => {
@@ -58,6 +58,7 @@ class Chat extends React.Component {
       // DEVELOPMENT
       partnerProfile: {
         name: "Testyface",
+        id: "111aaa",
         country: "United States",
         issue: {
           name: "Gun Control",
