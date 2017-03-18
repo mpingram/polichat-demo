@@ -7,11 +7,11 @@ const ErrorView = () => {
   
   const theme = "outside";
   return (
-    <AppFrameComponent theme={theme}>
-      <Box theme={theme}>
-        <div>Implement me!</div>
+    <AppFrame theme={theme}>
+      <Box theme={theme} size="lg" headerText={{main:"404: File not found"}}>
+        <div style={{fontSize: "2em"}}>That page doesn't seem to exist!</div>
       </Box>
-    </AppFrameComponent>
+    </AppFrame>
   )
 
 }

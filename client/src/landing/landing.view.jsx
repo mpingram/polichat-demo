@@ -1,4 +1,6 @@
-import * as React from "react";
+import React from "react";
+import {Link} from "react-router";
+
 import FacebookLogin from "react-facebook-login";
 
 import AppFrame from "../shared/layout/app-frame.component";
@@ -31,12 +33,15 @@ const LandingView = ( props ) => {
           If you want to talk to people who see things differently, press the button below to get started.
         </p>
         <div className={styles.loginButtonContainer}>
-          <FacebookLogin
-            appId="126544667869254"
-            autoLoad={true}
-            fields="name"
-            // onClick={componentClicked}
-            callback={responseFacebook} />
+          <Link to="/profile">
+            <FacebookLogin
+              appId="disabled"
+              //appId="126544667869254"
+              autoLoad={true}
+              fields="name"
+              // onClick={componentClicked}
+              callback={responseFacebook} />
+          </Link>
         </div>
       </Box>
     </AppFrame>

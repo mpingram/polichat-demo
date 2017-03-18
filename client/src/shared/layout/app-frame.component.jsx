@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router";
 import PolichatIcon from "../icons/polichat-icon.component";
 import ProfileIcon from "../icons/profile-icon.component";
 import styles from "./app-frame.component.scss";

@@ -1,7 +1,9 @@
 import React from "react";
+import {Link} from "react-router";
 
 import AppFrame from "../shared/layout/app-frame.component";
 import Box from "../shared/layout/box.component";
+import Button from "../shared/ui/button.component";
 
 import PoliticalSpectrumUIElement from "./political-spectrum-ui-element.component";
 import CountryPartyUIElement from "./country-party-ui-element.component";
@@ -32,6 +34,7 @@ const ProfileView = ( props ) => {
         <PoliticalSpectrumUIElement message="Socialized Health Care"/>
         <PoliticalSpectrumUIElement message="Legal Abortion"/>
         <CountryPartyUIElement />
+        <Link to="/chat"><Button text="continue"/></Link>
       </Box> 
     </AppFrame>
   )
