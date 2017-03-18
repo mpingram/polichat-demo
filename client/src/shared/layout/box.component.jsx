@@ -4,7 +4,7 @@ import style from "./box.component.scss";
 
 const propTypes = {
   theme: React.PropTypes.oneOf(["inside", "outside", "layout"]).isRequired,
-  size: React.PropTypes.oneOf(["sm", "med", "lg", "short-wide", "med-wide"]).isRequired,
+  size: React.PropTypes.oneOf(["sm", "med", "lg", "short-wide", "med-wide", "auto", "auto-med", "auto-wide"]).isRequired,
   headerText: React.PropTypes.shape({
     main: React.PropTypes.string,
     sub: React.PropTypes.string
@@ -48,6 +48,18 @@ const Box = ( props ) => {
     case "med-wide":
       width = style.wide;
       height = style.medHeight;
+      break;
+    case "auto-med":
+      width = style.medWidth;
+      height = style.autoHeight;
+      break;
+    case "auto-wide":
+      width = style.wide;
+      height = style.autoHeight;
+      break;
+    case "auto":
+      width = style.autoWidth;
+      height = style.autoHeight;
       break;
   }
 

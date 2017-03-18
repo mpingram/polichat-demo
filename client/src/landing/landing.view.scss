@@ -18,13 +18,32 @@
 .loginButtonContainer{
   width: auto;
   height: auto;
+  margin: 1em;
   padding: 1em;
-  margin: 2em;
   border-radius: 12px;
   border: 2px dashed $col-bg-light;
 }
 
 .loginButton{
   padding: 1em;
+
   border-radius: 12px;
+}
+
+@media (max-width: $breakpoints-mobile){
+  .callToActionHeader{
+    margin-top: 2em;
+    font-size: 2em;
+    padding: 0.5em;
+  }
+
+  .callToActionSubheader{
+    font-size: 1.25em;
+    padding: 0.5em;
+  }
+
+  .loginText{
+    font-size: 1em;
+    margin: 1em;
+  }
 }

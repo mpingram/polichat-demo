@@ -56,10 +56,12 @@ class CountryPartyUIElement extends React.Component {
 
         <div className={style.preferencesContainer} >
           <div className={style.radioButtonContainer} >
-          <input type="radio" name="own-country" value="true"/> I want to only talk to people from my country.
+          <input type="radio" name="own-country" value="true" id="own-country-true"/> 
+            <label htmlFor="own-country-true"> I want to only talk to people from my country.</label>
           </div>
           <div className={style.radioButtonContainer} > 
-          <input type="radio" name="own-country" value="false"/> I want to talk to anyone in the world.
+          <input type="radio" name="own-country" value="false" id="own-country-false"/> 
+            <label htmlFor="own-country-false"> I want to talk to anyone in the world.</label>
           </div>
         </div>
       </div>

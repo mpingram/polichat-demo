@@ -27,7 +27,7 @@ const ProfileView = ( props ) => {
 
   return (
     <AppFrame theme="inside">
-      <Box theme="inside" size="lg" headerText={headerText}>
+      <Box theme="inside" size="auto-wide" headerText={headerText}>
         <PoliticalSpectrumUIElement message="Strong gun control measures"/>
         <PoliticalSpectrumUIElement message="Socialized Health Care"/>
         <PoliticalSpectrumUIElement message="Legal Abortion"/>

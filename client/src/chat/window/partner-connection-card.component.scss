@@ -57,6 +57,10 @@
   margin-bottom: 3em;
 }
 
+.userOpinionBlock{
+  @extend .block;
+}
+
 .disconnectBlock{
   @extend .block;
 }
@@ -72,7 +76,7 @@
 
 
 
-@media (max-width: $breakpoints-small-screen){
+@media(max-width: $breakpoints-small-screen){
   .card{
     font-size: 0.8em;
     flex: 0 1 80px;
@@ -99,5 +103,11 @@
 
   .flagIcon{
     float: left;
+  }
+}
+
+@media(max-width: $breakpoints-mobile){
+  .userOpinionBlock{
+    display: none;
   }
 }

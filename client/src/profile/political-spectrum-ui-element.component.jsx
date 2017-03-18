@@ -7,7 +7,7 @@ import chooseColor from "../shared/utils/choose-color";
 
 import { PoliticalSpectrumNumericMax } from "../shared/config/app-defaults";
 
-import "./political-spectrum-ui-element.component.scss";
+import style from "./political-spectrum-ui-element.component.scss";
 
 const propTypes = {
   message: React.PropTypes.string.isRequired,
@@ -44,8 +44,8 @@ class PoliticalSpectrumUIElement extends React.Component {
 
   render(){
     return (
-      <div style={{position:"relative", width:"95%", textAlign: "left"}}>
-        <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", justifyContent: "flex-start", fontSize: "1.5em"}}>
+      <div className={style.wrapper}>
+        <div className={style.textWrapper}>
           <div style={{marginRight: "5px"}}> 
             {this.message}:
           </div>
@@ -54,7 +54,7 @@ class PoliticalSpectrumUIElement extends React.Component {
           </div>
         </div>
         
-        <input type="range" style={{position: "relative", zIndex: "2"}} max={this.max} min={this.min} defaultValue="0" onChange={this.handleChange} />
+        <input className={style.slider} type="range" max={this.max} min={this.min} defaultValue="0" onChange={this.handleChange} />
         <PoliticalSpectrumMeter value={this.state.value} color={this.state.color} max={this.max}/>
       </div>
     )

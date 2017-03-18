@@ -2,8 +2,8 @@
 
 .container{
 
-  flex: 0.25 1 6em;
-
+  flex: 0.25 1 8em;
+  padding: 1em;
   width: 100%;
 
   display: flex;
@@ -38,4 +38,22 @@
 .radioButtonContainer{
   text-align: left;
   margin-bottom: 1em;
+}
+
+
+@media(max-width: $breakpoints-mobile){
+  .container{
+    box-sizing: initial;
+    margin-top: 2em;
+    height: auto;
+    flex-direction: column;
+    font-size: 1em;
+    align-items: center;
+  }
+
+  .preferencesContainer{
+    margin-top: 2em;
+    margin-left: 0.5em;
+  }
+
 }

@@ -49,7 +49,7 @@ const PartnerConnectionCard = ( props ) => {
         </div>
       </div>
 
-      <div className={style.block}>
+      <div className={style.userOpinionBlock}>
         You disagree about
         <div className={style.emphasis}>
           {profile.issue.name}
