@@ -32,7 +32,7 @@ const AppColors = {
   dark: "#ff5d55",
 }
 
-const PoliticalSpectrumNumericMax = 25;
+const PoliticalSpectrumNumericMax = 100;
 
 
 

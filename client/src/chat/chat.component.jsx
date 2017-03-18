@@ -57,7 +57,7 @@ class Chat extends React.Component {
       active: props.firstTimeUser === true ? false : true,
       // DEVELOPMENT
       partnerProfile: {
-        name: "Testyface",
+        name: "Michael",
         id: "111aaa",
         country: "United States",
         issue: {

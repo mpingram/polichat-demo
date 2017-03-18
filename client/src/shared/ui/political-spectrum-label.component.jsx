@@ -20,22 +20,22 @@ const PoliticalSpectrumLabel = ( props ) => {
     if ( ratio < cutoffs.moderate ){
       label = "moderate";
     } else if ( ratio < cutoffs.centerMain ) {
-      label = "center-right"
+      label = "somewhat against"
     } else if (ratio < cutoffs.main) {
-      label = "right";
+      label = "against";
     } else {
-      label = "far right";
+      label = "strongly against";
     }
   } else if ( ratio < 0){
     ratio *= -1;
     if ( ratio < cutoffs.moderate ){
       label = "moderate";
     } else if ( ratio < cutoffs.centerMain ) {
-      label = "center-left"
+      label = "somewhat for"
     } else if (ratio < cutoffs.main) {
-      label = "left";
+      label = "for";
     } else {
-      label = "far left";
+      label = "strongly for";
     }
   }
 

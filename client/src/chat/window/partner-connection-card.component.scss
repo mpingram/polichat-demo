@@ -2,72 +2,102 @@
 
 .card{
   flex: 0 1 200px;
+  align-self: flex-start;
 
   flex-direction: column;
   order: 99;
 
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: flex-start;
   
-  font-size: 0.8em;
-  color: $col-text-grey;
+  font-size: 1em;
+  color: $col-text-light-grey;
   text-align: center;
   vertical-align: center;
 
   padding: 0.5em;
 }
 
+
+
+.emphasis{
+  margin: 10px;
+  font-size: 1.25em;
+  color: black;
+}
+
+.smallText{
+  font-size: 0.8em;
+}
+
+.flagIcon{
+  flex: 0 0 auto;
+  display: inline-block;
+  float: left;
+  vertical-align: center;
+  line-height: 100%;
+  fill: $col-warning;
+}
+
+.block{
+  position: relative;
+  margin: 1em;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.reportUserBlock{
+  @extend .block;
+  flex: 0.5 1 auto;
+  flex-direction: row;  
+  margin-bottom: 3em;
+}
+
+.disconnectBlock{
+  @extend .block;
+}
+
+.disconnectIcon{
+  flex: 0 0 30px;
+  width: 30px;
+  fill: $col-text-white;
+  border-radius: 100%;
+  background-color: $col-bg-dark;
+}
+
+
+
+
 @media (max-width: $breakpoints-small-screen){
   .card{
+    font-size: 0.8em;
     flex: 0 1 80px;
+    align-self: stretch;
     order: initial;
     flex-direction: row;
     z-index: 1;
     box-shadow: $shadow-tiny;
   }
+
+  .block{
+    justify-content: center;
+  }
+  
+  .reportUserBlock{
+    flex-direction: column;
+    margin: 1em;
+    align-self: baseline;
+  }
+
+  .disconnectBlock{
+    align-self: baseline;
+  }
+
+  .flagIcon{
+    float: left;
+  }
 }
-
-.emphasis{
-  font-size: 1.15em;
-  color: default;
-}
-
-.block{
-  margin: 0 1em;
-  flex: 1 0 50px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.nameBlock{
-}
-
-.name{
-  @extend .emphasis;
-}
-
-.country{
-
-}
-
-
-.issueBlock{
-
-}
-
-.issue{
-  @extend .emphasis;
-}
-
-
-.flagBlock{
-
-}
-
-.disconnectBlock{
-
-}
-

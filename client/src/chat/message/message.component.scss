@@ -34,7 +34,7 @@
 }
 
 .message.other{
-  background-color: $col-message-other;
+  background-color: lighten($col-message-other, 20%);
   float: left;
   clear: both;
 }

@@ -52,17 +52,6 @@ class CountryPartyUIElement extends React.Component {
             </DropdownMenu>
           </div>
 
-          <div className={style.dropdownContainer}>
-            My political party is...
-            <DropdownMenu 
-              optionsList={ this.partyMap[ this.state.selectedCountry ] }
-              value={this.state.selectedParty}
-              active={this.state.selectedCountry !== undefined}
-              onSelection={this.handlePartySelection} >
-            </DropdownMenu>
-          </div>
-
-
         </div>
 
         <div className={style.preferencesContainer} >

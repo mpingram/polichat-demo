@@ -5,7 +5,7 @@
   clear: both;
   
   border-radius: $border-radius-lg;
-  background-color: $col-message-other;
+  background-color: lighten($col-message-other, 20%);
   
   position: relative;
   width: auto;

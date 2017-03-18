@@ -45,9 +45,15 @@ class PoliticalSpectrumUIElement extends React.Component {
   render(){
     return (
       <div style={{position:"relative", width:"95%", textAlign: "left"}}>
-        <span style={{fontSize: "1.5em"}}>
-           {this.message} <PoliticalSpectrumLabel value={this.state.value} color={this.state.color} max={this.max}/>
-        </span>
+        <div style={{display: "flex", flexDirection: "row", alignItems: "baseline", justifyContent: "flex-start", fontSize: "1.5em"}}>
+          <div style={{marginRight: "5px"}}> 
+            {this.message}:
+          </div>
+          <div style={{fontSize: "1.15em"}}>
+            <PoliticalSpectrumLabel value={this.state.value} color={this.state.color} max={this.max}/>
+          </div>
+        </div>
+        
         <input type="range" style={{position: "relative", zIndex: "2"}} max={this.max} min={this.min} defaultValue="0" onChange={this.handleChange} />
         <PoliticalSpectrumMeter value={this.state.value} color={this.state.color} max={this.max}/>
       </div>
