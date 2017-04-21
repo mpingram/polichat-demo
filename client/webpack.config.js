@@ -1,5 +1,6 @@
 //const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
+const fs = require("fs");
 const webpack = require("webpack");
 
 // const extractSass = new ExtractTextPlugin({
@@ -58,6 +59,7 @@ module.exports = {
       {
         test: /\.scss$/,
         include: /src/,
+        exclude: /node_modules/,
         use: [
           { loader: "style-loader" },
           { loader: "css-loader?modules&importLoaders=1" },
@@ -77,6 +79,7 @@ module.exports = {
       },
       { 
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         include: /src/,
         use: [
           { loader: "babel-loader" },
@@ -90,8 +93,7 @@ module.exports = {
       "node_modules",
       path.resolve(__dirname, "app")
     ],
-    // Add '.ts' and '.tsx' as resolvable extensions.
-    extensions: ["*", ".webpack.js", ".web.js", ".js", ".jsx"]
+    extensions: [".webpack.js", ".web.js", ".js", ".jsx"]
   },
 
   plugins: [
@@ -107,9 +109,9 @@ module.exports = {
   // This is important because it allows us to avoid bundling all of our
   // dependencies, which allows browsers to cache those libraries between builds.
   //externals: fs.readdirSync("node_modules")
-  externals: {
+  /*externals: {
        //"react": "react",
        //"react-dom": "reactDOM",
-  },
+  },*/
 };
 

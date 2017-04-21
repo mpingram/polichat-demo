@@ -26,9 +26,13 @@
 
 .loginButton{
   padding: 1em;
-
+  background: #3B5998;
   border-radius: 12px;
+  
+  text-decoration: none;
+  color: $col-text-white;
 }
+
 
 @media (max-width: $breakpoints-mobile){
   .callToActionHeader{

@@ -14,8 +14,11 @@ const propTypes = {
 
 const ProfileView = ( props ) => {
   
+  // TODO: development only
+  const firstTimeUser = true;
+
   let headerText;
-  if ( props.firstTimeUser === true ){
+  if ( firstTimeUser === true ){
     headerText = {
       main: "Before you begin...", 
       sub: "Let us know a little more about your political views."

@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "webpack -p",
+    "build": "webpack --config webpack.config.production.js -p",
     "test": "karma start karma.conf.js"
   },
   "author": "Michael Ingram",

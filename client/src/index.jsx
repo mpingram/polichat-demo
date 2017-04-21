@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Router, Route, Link, browserHistory } from 'react-router';
+//import { Router, Route, Link, browserHistory } from 'react-router';
+import { Router, Route, Link, hashHistory } from 'react-router';
 
 // DEVELOPMENT
 // ----------
@@ -18,11 +19,13 @@ import ProfileView from "./profile/profile.view";
 import ChatView from "./chat/chat.view";
 import ErrorView from "./error/error.view";
 
+
 render( (
 
-  // remove AppContainer in production
+  // TODO: remove AppContainer in production
+  // TODO: switch hashHistory --> browserHistory in production
   <AppContainer>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Route path="/" component={LandingView} />
       <Route path="/chat" component={ChatView} />
       <Route path="/profile" component={ProfileView} />

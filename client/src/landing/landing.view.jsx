@@ -30,17 +30,13 @@ const LandingView = ( props ) => {
 
       <Box theme={theme} size="med">
         <p className={styles.loginText}>
-          If you want to talk to people who see things differently, press the button below to get started.
+          If you want to see things differently, press the button below to get started.
         </p>
         <div className={styles.loginButtonContainer}>
           <Link to="/profile">
-            <FacebookLogin
-              appId="disabled"
-              //appId="126544667869254"
-              autoLoad={true}
-              fields="name"
-              // onClick={componentClicked}
-              callback={responseFacebook} />
+            <div className={styles.loginButton}>
+            [Dummy Login Button]
+            </div>
           </Link>
         </div>
       </Box>
@@ -52,3 +48,11 @@ const LandingView = ( props ) => {
 
 
 export default LandingView;
+
+// <FacebookLogin
+//   appId="disabled"
+//   //appId="126544667869254"
+//   autoLoad={true}
+//   fields="name"
+//   // onClick={componentClicked}
+//   //callback={responseFacebook} />
